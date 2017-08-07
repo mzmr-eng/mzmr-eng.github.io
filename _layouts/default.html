@@ -11,7 +11,7 @@
   <body>
     <section class="page-header">
       <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline random-description">{{description[0] }}</h2>
+      <h2 class="project-tagline random-description">{{ description[0] }}</h2>
       
       {% if site.github.is_project_page %}
         <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
@@ -31,6 +31,16 @@
         {% endif %}
       </footer>
     </section>
+   
+    <script type="text/javascript">
+      (function() {
+        var descriptions = [
+          {% for description in site.description %}
+            "{{ description }}"{% if forloop.last %}{% else %},{% endif %}
+          {% endfor %}
+        ];
+      })();
+    </script>
 
     {% if site.google_analytics %}
       <script type="text/javascript">
