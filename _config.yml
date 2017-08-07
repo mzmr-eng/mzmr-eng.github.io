@@ -1,8 +1,4 @@
 title: mzmr
-description:
- - istributed dazzlement
- - transfixion toolbox
- - heterogeneous hypnosis
- - captivation clusters
+description: [ foo, bar, baz ]
 
 theme: jekyll-theme-cayman
