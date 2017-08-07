@@ -38,7 +38,8 @@
             "{{ description }}"{% if forloop.last %}{% else %},{% endif %}
           {% endfor %}
         ];
-        var desc = descriptions[Math.random(0,descriptions.length)];
+        var idx = Math.floor(Math.random() * descriptions.length);
+        var desc = descriptions[idx];
         var toReplace = document.getElementsByClassName("random-description");
         for(var i = 0; i < toReplace.length; ++i) {
            toReplace[i].innerHTML = desc;
