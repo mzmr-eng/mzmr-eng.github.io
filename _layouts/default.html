@@ -13,7 +13,7 @@
       <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
       
       {% for description in site.description %}
-        <h2 class="project-tagline">tag: {{description }}</h2>
+        <h2 class="project-tagline">{{description }}</h2>
       {% endfor %}
       
       {% if site.github.is_project_page %}
